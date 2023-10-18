@@ -14,7 +14,7 @@ print(double(4))
 y = double(3)
 print(y)
 
-# Alle Funktionen in Python sind First.Class-Funktionen, deswegen dürfen wir sie zuweisen
+# Alle Funktionen in Python sind First-Class-Funktionen, deswegen dürfen wir sie zuweisen
 # oder anderen Funktionen als Argumenten übergeben.
 
 def apply_to_one(f):
