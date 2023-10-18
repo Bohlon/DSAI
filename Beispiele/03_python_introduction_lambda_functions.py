@@ -4,7 +4,7 @@
 # In Python definieren wir Funktionen üblicherweise mit def.
 ###########################################################
 
-def double(x:[int|float])->float:
+def double(x:int)->int:
     """An dieser Stelle kann ein optionaler Docstring stehen, der erklärt, was die Funktion tut.
     Diese Funktion multipliziert die Eingabe mit 2"""
     return 2*x
