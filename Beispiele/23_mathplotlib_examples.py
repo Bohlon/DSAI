@@ -12,7 +12,7 @@ plt.show()                  # Display the figure
 
 # 2. Draw line charts of financial data
 import pandas as pd
-df = pd.read_csv('.././Daten/mpl_data.csv', sep = ',', parse_dates = True, index_col=0)
+df = pd.read_csv('./Daten/mpl_data.csv', sep = ',', parse_dates = True, index_col=0)
 df.plot()
 plt.xlabel('Date')
 plt.ylabel('Euro')
