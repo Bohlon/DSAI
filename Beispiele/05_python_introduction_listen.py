@@ -30,7 +30,7 @@ not_a_copy_of_x = x
 hello:str = 'Hello World'
 hello[-3:]                          # 'rld'
 
-# Einem Slice kann ein drittes Argument mitgegeben werden, dabei handelt es sich um die Schrittweite, die Schrittweite 
+# Einem Slice kann ein drittes Argument mitgegeben werden, um seine Schrittweite festzulegen. Die Schrittweite 
 # kann auch negative sein
 every_third = x[::3]                # [-1,3,6,9]
 five_to_three = x[5:2:-1]           # [5,4,3]
