@@ -10,12 +10,12 @@ maximum = 0
 for i in werte:
     if (i < minimum):
         minimum = i
-print(minimum)      # expected 12
+print(f'Minimum without libs: {minimum}')      # expected 12
 
 for i in werte:
     if (i > maximum):
         maximum = i
-print (maximum)     # expected 91
+print(f'Maximum without libs: {maximum}')     # expected 91
 
 class tmp():
 
@@ -24,7 +24,7 @@ class tmp():
         for i in list:
             if (i > maxi):
                 maxi= i
-        print (maxi)
+        print(f'Max: {maxi}')
         return maxi
 
     def min(list):
@@ -32,7 +32,7 @@ class tmp():
         for i in list:
             if (i < mini):
              mini = i
-        print(mini)
+        print(f'Min: {mini}')
         return mini
     
     def floor(list):
@@ -41,7 +41,7 @@ class tmp():
         for i in list:
             y[cnt]=math.floor(i)
             cnt+=1
-        print(y)
+        print(f'Floor: {y}')
         return y
     
     def ceil(list):
@@ -50,7 +50,7 @@ class tmp():
         for i in list:
             y[cnt]=math.ceil(i)
             cnt+=1
-        print(y)
+        print(f'Ceil: {y}')
         return y
 
     def mode(list):
@@ -69,7 +69,7 @@ class tmp():
         for i in list:
             y+=i
         erg = y/len(list)
-        print(erg)
+        print(f'Mean: {erg}')
         return erg
 
     def median(list):
@@ -77,19 +77,19 @@ class tmp():
         list.sort()
         if not len(list) % 2:
             return (list[half - 1] + list[half]) / 2.0
-        print(list[half])
+        print(f'Median: {list[half]}')
         return list[half]
 
     def range(list):
         erg = max(list)-min(list)
-        print(erg)
+        print(f'Range: {erg}')
         return erg
 
     def standard_derivation(list):
         mean = sum(list) / len(list)
         var = sum((l-mean)**2 for l in list) / len(list)
         st_dev = math.sqrt(var)
-        print(st_dev)
+        print(f'Standart Derivation: {st_dev}')
         return st_dev
 
     def variance(list):
@@ -97,7 +97,7 @@ class tmp():
         mean = sum(list) / n
         deviations = [(x - mean) ** 2 for x in list]
         variance = sum(deviations) / n
-        print(variance)
+        print(f'Variance: {variance}')
         return variance
 
 tmp.max(werte)
