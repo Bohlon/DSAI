@@ -25,6 +25,7 @@ class tmp():
             if (i > maxi):
                 maxi= i
         print (maxi)
+        return maxi
 
     def min(list):
         mini = 1000
@@ -32,7 +33,8 @@ class tmp():
             if (i < mini):
              mini = i
         print(mini)
-
+        return mini
+    
     def floor(list):
         y = {}
         cnt = 0
@@ -40,7 +42,8 @@ class tmp():
             y[cnt]=math.floor(i)
             cnt+=1
         print(y)
-
+        return y
+    
     def ceil(list):
         y = {}
         cnt = 0
@@ -48,6 +51,7 @@ class tmp():
             y[cnt]=math.ceil(i)
             cnt+=1
         print(y)
+        return y
 
     def mode(list):
         y={}
@@ -56,7 +60,8 @@ class tmp():
                 y[i]=1
             else:
                 y[i]+=1
-        print([g for g,l in y.items() if l==max(y.values())]) 
+        print(f'Mode: {[g for g,l in y.items() if l==max(y.values())]}')
+        return [g for g,l in y.items() if l==max(y.values())]
 
     def mean(list):
         y = 0
@@ -65,30 +70,35 @@ class tmp():
             y+=i
         erg = y/len(list)
         print(erg)
+        return erg
 
     def median(list):
         half = len(list) // 2
         list.sort()
         if not len(list) % 2:
             return (list[half - 1] + list[half]) / 2.0
-        print(list[half]) 
+        print(list[half])
+        return list[half]
 
     def range(list):
         erg = max(list)-min(list)
         print(erg)
+        return erg
 
     def standard_derivation(list):
         mean = sum(list) / len(list)
         var = sum((l-mean)**2 for l in list) / len(list)
         st_dev = math.sqrt(var)
         print(st_dev)
+        return st_dev
 
     def variance(list):
         n = len(list)
         mean = sum(list) / n
         deviations = [(x - mean) ** 2 for x in list]
         variance = sum(deviations) / n
-        print(variance) 
+        print(variance)
+        return variance
 
 tmp.max(werte)
 tmp.min(werte)
