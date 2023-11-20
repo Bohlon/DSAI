@@ -1,9 +1,8 @@
-from matplotlib import pyplot as plt
 import math
-import numpy
-import statistics
+import numpy as np
+import statistics as st
 
-werte = [13.2,12.3,44.4,33.1,25.9,65.3,78.1,53.5,91.7,54.4,34.2,45.8,54.4,37.2,78.1,13.2]
+werte = [12.3,13.2,44.4,33.1,25.9,65.3,78.5,53.5,91.7,54.3,34.2,45.8,50.4,37.2,78.1,13.2]
 minimum = 1000
 maximum = 0
 
@@ -36,32 +35,29 @@ class tmp():
         return mini
     
     def floor(list):
-        y = {}
-        cnt = 0
-        for i in list:
-            y[cnt]=math.floor(i)
-            cnt+=1
-        print(f'Floor: {y}')
-        return y
+        rounded_values = [int(x) for x in list]
+        print(f'Floor: {rounded_values}')
+        return np.array(rounded_values)
     
     def ceil(list):
-        y = {}
-        cnt = 0
-        for i in list:
-            y[cnt]=math.ceil(i)
-            cnt+=1
-        print(f'Ceil: {y}')
-        return y
+        rounded_values = []
+        for x in list:
+            rounded_values.append(-(-x // 1))
+        print(f'Ceil: {rounded_values}')
+        return rounded_values
 
     def mode(list):
-        y={}
-        for i in list:
-            if not i in y:
-                y[i]=1
+        counts = {}
+        for num in list:
+            if num not in counts:
+                counts[num] = 1
             else:
-                y[i]+=1
-        print(f'Mode: {[g for g,l in y.items() if l==max(y.values())]}')
-        return [g for g,l in y.items() if l==max(y.values())]
+                counts[num] += 1
+        
+        max_count = max(counts.values())
+        modes = [num for num, count in counts.items() if count == max_count]
+        print(f'Mode: {modes}')
+        return modes[0] if modes else None
 
     def mean(list):
         y = 0
@@ -100,13 +96,13 @@ class tmp():
         print(f'Variance: {variance}')
         return variance
 
-tmp.max(werte)
-tmp.min(werte)
-tmp.floor(werte)
-tmp.ceil(werte)
-tmp.mode(werte)
-tmp.mean(werte)
-tmp.median(werte)
-tmp.range(werte)
-tmp.standard_derivation(werte)
-tmp.variance(werte)
+assert tmp.max(werte) == np.max(werte)
+assert tmp.min(werte) == np.min(werte)
+assert np.array_equal(tmp.floor(werte), np.floor(werte))
+assert np.array_equal(tmp.ceil(werte), np.ceil(werte))
+assert np.array_equal(tmp.mode(werte), st.mode(werte))
+assert tmp.mean(werte) == np.mean(werte)
+assert tmp.median(werte) == np.median(werte)
+assert tmp.range(werte) == 79.4
+assert np.isclose(tmp.standard_derivation(werte), np.std(werte), rtol=10)
+assert np.isclose(tmp.variance(werte), np.var(werte), rtol=10)
