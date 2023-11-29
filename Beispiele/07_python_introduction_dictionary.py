@@ -48,8 +48,8 @@ tweet_values = tweet.values()           # Iterable für die Werte
 tweet_items = tweet.items()             # Iterable für die (Schlüssel/Werte-) Tuple
 
 'user' in tweet_keys                    # true
-'user' in tweet
-'Miklauc' in tweet_values               # langsam
+'user' in tweet                         # in Python eher üblich zum Überprüfen von Schlüsseln
+'Miklauc' in tweet_values               # langsam, aber einziger Weg, dies zu überprüfen
 
 # Defaultdictionary
 from collections import defaultdict
