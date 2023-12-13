@@ -52,6 +52,9 @@ tweet_items = tweet.items()             # Iterable für die (Schlüssel/Werte-) 
 'Miklauc' in tweet_values               # langsam, aber einziger Weg, dies zu überprüfen
 
 # Defaultdictionary
+# Es funktioniert wie ein gewöhnliches Dictionary, aber wenn man nach einem nicht vorhandenen Schlüssel
+# nachschlägt, fügt es zunächst einen neuen Wert mithilfe eines vorgegebenen Null-Argument-Funktion ein
+# Es ist in dem Modul collections enthalten
 from collections import defaultdict
 def def_values()->str:
     return 'Not present'
@@ -67,4 +70,3 @@ print(d['c'])                           # not present
 
 dd_int = defaultdict(int)
 dd_list = defaultdict(list)
-
