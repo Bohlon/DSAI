@@ -70,3 +70,6 @@ print(d['c'])                           # not present
 
 dd_int = defaultdict(int)
 dd_list = defaultdict(list)
+dd_list[2].append(1)
+dd_pair = defaultdict(lambda: [0,0])
+dd_pair[2][1] = 1
