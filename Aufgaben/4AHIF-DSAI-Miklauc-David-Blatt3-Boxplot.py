@@ -9,14 +9,14 @@ def simulate_class_sizes():
     return class1, class2, class3
 
 def save_data(class1, class2, class3):
-    np.savez("class_heights.npz", class1 = class1, class2 = class2, class3 = class3)
+    np.savez("../Daten/class_heights.npz", class1 = class1, class2 = class2, class3 = class3)
 
 def load_data():
-    data = np.load("class_heights.npz")
+    data = np.load("../Daten/class_heights.npz")
     return data ['class1'], data["class2"], data["class3"]
     
 def load_data_4ahif():
-    data = pd.read_csv('Koerpergroessen_4AHIF.csv')
+    data = pd.read_csv('../Daten/Koerpergroessen_4AHIF.csv')
     return data
 
 def plot_boxplot(class1, class2, class3, class4a, title):
