@@ -34,7 +34,7 @@ save_data(class1, class2, class3)
 class4a = load_data_4ahif()
 plot_boxplot(class1, class2, class3, class4a.Koerpergroesse, 'Schülergrößen verschiedener Klassen (mit normal generierten Daten)')
 
-# with loading the saved fdata
+# with loading the saved data
 class1, class2, class3 = simulate_class_sizes()
 class1_saved, class2_saved, class3_saved = load_data()
 plot_boxplot(class1, class2, class3, class4a.Koerpergroesse, 'Schülergrößen verschiedener Klassen (mit neu generierten Daten)')
