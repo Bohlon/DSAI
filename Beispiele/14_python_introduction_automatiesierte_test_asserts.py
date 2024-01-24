@@ -16,7 +16,7 @@ assert smallest_item([1, 0, -1, -2]) == -1, 'somthing wrong with the smallest it
 
 # Asserts kommen auch bei Eingabewerten von Funktionen zum Einsatz
 def smallest_item(xs:list)->int:
-    assert xs, 'empty list has not smallest item'
+    assert xs, 'empty list has no smallest item'
     return min(xs)
 
 smallest_item({12, 23})
