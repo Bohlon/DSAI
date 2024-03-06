@@ -44,5 +44,5 @@ assert make_matrix(4, 4, lambda i,j: 5) == [[5, 5, 5, 5], [5, 5, 5, 5], [5, 5, 5
 assert make_matrix(4, 4, lambda i,j: 3) == [[3, 3, 3, 3], [3, 3, 3, 3], [3, 3, 3, 3], [3, 3, 3, 3]]
 assert friend_matrix[0][2] == 1, "0 and 2 are friends"
 assert friend_matrix[0][8] == 0, "0 and 8 are not friends"
-assert shape([[1,2,3], [4,5,6]]) == (2,3)
+assert shape([[1, 2, 3], [4, 5, 6]], 0) == (2,3)
 assert identity_matrix(5) == [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]]
