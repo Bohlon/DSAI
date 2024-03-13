@@ -60,7 +60,7 @@ even_squares = (x**2 for x in evens)    # tut solange nicht, bis er aufgerufen w
 even_squares_ending_in_six = (x for x in even_squares if x%10 == 6)
 
 # Pythonesk
-# DIe Funktion enumerate() fügt einen Zähler als Schlüssel
+# Die Funktion enumerate() fügt einen Zähler als Schlüssel
 # des Aufzählungsobjekts hinzu
 names = ["Alice", "Bob", "Charlie", "Debbie"]
 for i, name in enumerate(names):
